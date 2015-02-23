@@ -24,10 +24,10 @@
 # { MODKEY|GDK_SHIFT_MASK, GDK_g, spawn, SETPROP("_SURF_URI_RAW") },
 
 font='-*-terminus-medium-*-*-*-*-*-*-*-*-*-*-*'
-normbgcolor='#fdf6e3'
-normfgcolor='#586e75'
-selbgcolor=$normbgcolor
-selfgcolor='#cb4b16'
+#normbgcolor='#fdf6e3'
+#normfgcolor='#586e75'
+#selbgcolor=$normbgcolor
+#selfgcolor='#cb4b16'
 histor=~/.surf/history.txt
 bmarks=~/.surf/bookmarks.txt
 ffile=~/.surf/find.txt 
@@ -37,6 +37,7 @@ xid=$2
 
 dmenu="dmenu -nb $normbgcolor -nf $normfgcolor \
        -sb $selbgcolor -sf $selfgcolor"
+dmenu="dmenu"
 
 s_get_prop() { # xprop
     xprop -id $xid $1 | cut -d '"' -f 2
