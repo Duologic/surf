@@ -112,10 +112,10 @@ case "$pid" in
         ;;
     "t") # trac
         if [[ $arg == \#* ]]; then
-            ticket=$(echo $arg | cut -d '#' -f 2)
+            ticket=$(echo $arg | cut -d '#' -f 2-)
             uri="https://trac.vikingco.com/ticket/$ticket"
         elif [[ $arg == \r* ]]; then
-            ticket=$(echo $arg | cut -d 'r' -f 2)
+            ticket=$(echo $arg | cut -d 'r' -f 2-)
             uri="https://trac.vikingco.com/report/$ticket"
         else
             uri="https://trac.vikingco.com/search?q=$arg"
